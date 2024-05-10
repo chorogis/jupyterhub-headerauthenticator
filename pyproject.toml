@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jupyterhub-headerauthenticator"
+version = "0.1.0"
+description = "JupyterHub user authentication via the http header"
+authors = [
+  { name = "chorogis" },
+]
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/chorogis/jupyterhub-headerauthenticator"
+Source = "https://github.com/chorogis/jupyterhub-headerauthenticator"
+Tracker = "https://github.com/chorogis/jupyterhub-headerauthenticator/issues"
+
+[project.entry-points."jupyterhub.authenticators"]
+header = "jupyterhub_headerauthenticator.auth:HeaderAuthenticator"
